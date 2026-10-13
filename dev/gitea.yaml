@@ -3,7 +3,6 @@ services:
     image: gitea/gitea:28.1.0
     container_name: gitea
     restart: unless-stopped
-    user: "1001:1001"
     environment:
       - USER_UID=1001
       - USER_GID=1001
