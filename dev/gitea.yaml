@@ -10,4 +10,7 @@ services:
       - "3002:3000"
       - "2222:22"
     volumes:
-      - /mnt/docker-data/gitea:/data
+      - gitea-data:/data
+
+volumes:
+  gitea-data:

@@ -3,8 +3,10 @@ services:
     image: louislam/uptime-kuma:2.5.6
     container_name: uptime-kuma
     restart: unless-stopped
-    user: "1001:1001"
     ports:
       - "3001:3001"
     volumes:
-      - /mnt/docker-data/uptime-kuma:/app/data
+      - uptime-kuma-data:/app/data
+
+volumes:
+  uptime-kuma-data:

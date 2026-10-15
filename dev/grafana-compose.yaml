@@ -3,8 +3,10 @@ services:
     image: grafana/grafana:13.2.3
     container_name: grafana
     restart: unless-stopped
-    user: "1001:1001"
     ports:
       - "3000:3000"
     volumes:
-      - /mnt/docker-data/grafana:/var/lib/grafana
+      - grafana-data:/var/lib/grafana
+
+volumes:
+  grafana-data:
